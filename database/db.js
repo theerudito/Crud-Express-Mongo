@@ -1,9 +1,10 @@
-const mongoose = require("mongoose")
+const mongoose =  require("mongoose")
+require("dotenv").config()
 
-const url = "mongodb://localhost/AlumnosDB"
 
-const conexion = mongoose.connect(url)
-.then( () =>console.log("Conectado a la Base de Datos de MongoDB"))
-.catch( (e) => console.log("Error en conectar con mongo: " + e))
+const conexion = mongoose.connect(process.env.MONGODB_URI)
+  .then( () => console.log("Conectado a la Base de Datos MongoDB"))
+  .catch((error) => console.error(error))
+
 
 module.exports = conexion

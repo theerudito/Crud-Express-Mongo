@@ -17,6 +17,5 @@ app.get("/", (req, res) => {
   res.send("Hola")
 })
 
-app.listen(3000, () => {
-  console.log("SERVIDOR A SU SERVICIO EN EL PUERTO 3000")
-})
+const port = process.env.PORT || 3000
+app.listen(port, () => console.log("SERVIDOR A SU SERVICIO EN EL PUERTO", port))
