@@ -4,8 +4,6 @@ const router = express.Router()
 
 const alumnoControler = require("../controles/alumnoControler")
 
-router.get("/", alumnoControler.mostrar) 
-
 
 //Mostrar todos los alumnos (GET)
 router.get('/', alumnoControler.mostrar)
@@ -15,6 +13,7 @@ router.post('/crear', alumnoControler.crear)
 router.post('/editar', alumnoControler.editar)
 //Borrar alumno (GET)
 router.get('/borrar/:id', alumnoControler.borrar)
-module.exports = router
 
 module.exports = router
+
+
